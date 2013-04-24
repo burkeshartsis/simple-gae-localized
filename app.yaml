@@ -40,3 +40,6 @@ skip_files:
 - ^(.*/)?.*\.scss
 - ^(.*/)?config\.rb
 - ^_source
+- ^README\..*
+- \.gitignore
+- ^\.git/.*

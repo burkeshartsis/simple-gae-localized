@@ -5,4 +5,18 @@ A simplified, frontend focused, Google App Engine boilerplate based on the gae-b
 
 ======================
 
-The goal here is to allow for quick roll out of traditionally structured websites. It's lean and simple. Thats it.
+The goal here is to allow for quick rollout of traditionally structured websites. It's lean and simple. Thats it.
+
+What it does have:
+
+- Preconfigured App.yaml, handlers, and routes
+- Set up for base handlers (universal/site wide handlers)
+- Jinja2 templating
+- Best practice App Engine folder structure
+
+
+What it doesn't have:
+
+- SASS/SCSS/LESS
+- Database setup
+- L10N support

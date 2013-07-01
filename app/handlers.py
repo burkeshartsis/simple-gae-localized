@@ -11,8 +11,11 @@ class HomeHandler(BaseHandler):
 
         """Display the Home page"""
 
+
         template_values = {
             # declare template values here
+            'l10n': BaseHandler.get_content(self),
+            'boom': BaseHandler.get_languages(self)
         }
 
         # load the welcome page template

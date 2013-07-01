@@ -1,4 +1,9 @@
-"""Main controller script for the Engage website"""
+#!/usr/bin/env python
+#
+# Created by Burke Shartsis
+#
+
+"""Main controller script for your website or app"""
 
 import os
 import sys

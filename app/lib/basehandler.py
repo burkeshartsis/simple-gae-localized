@@ -1,33 +1,48 @@
 import json
 import os
 import webapp2
-
 from webapp2_extras import sessions
 
 class BaseHandler(webapp2.RequestHandler):
   """
-      BaseHandler for all requests
-      
-      Holds the session properties so they
-      are reachable for all requests
+    BaseHandler for all requests
+    
+    Holds the session properties so they
+    are reachable for all requests
   """
+  def dispatch(self):
+    """
+      Get a session store for this request.
+    """
+    self.session_store = sessions.get_store(request=self.request)
 
-  # def dispatch(self):
-  #   """ Get a session store for this request. """
-  #   self.session_store = sessions.get_store(request=self.request)
+    route_name = self.request.route.name
 
+    # if this is not the home page or a translation
+    if route_name != 'home' and route_name != 'enter_with_language':
+      return self.redirect('/')
 
-  # @webapp2.cached_property
-  # def session_store(self):
-  #   return sessions.get_store(request=self.request)
+    try:
+      # Dispatch the request.
+      webapp2.RequestHandler.dispatch(self)
+    finally:
+      # Save all sessions.
+      self.session_store.save_sessions(self.response)
 
-  # @webapp2.cached_property
-  # def session(self):
-  #   # Returns a session using the default cookie key.
-  #   return self.session_store.get_session()
+    @webapp2.cached_property
+    def session_store(self):
+      return sessions.get_store(request=self.request)
+
+    @webapp2.cached_property
+    def session(self):
+      # Returns a session using the default cookie key.
+      return self.session_store.get_session()
 
   def get_arb(self):
-    arb = json.load(open('app/l10n/en/ept.arb'))
+    #language = self.get_language()
+    #arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
+
+    arb = json.load(open('app/l10n/en/en.arb'))
     return arb
     
   def get_content(self):
@@ -53,6 +68,10 @@ class BaseHandler(webapp2.RequestHandler):
     languages = os.listdir('app/l10n')
     return languages
 
+  def get_language_regex(self):
+      array = self.get_languages()
+      return '|'.join(str(language) for language in array)
+
   def set_language(self):
     valid_languages = self.get_languages()
     new_language = ''
@@ -68,12 +87,12 @@ class BaseHandler(webapp2.RequestHandler):
 
     self.session['user_language'] = new_language
 
-  #   """ Return currently selected language """
-  #   def get_language(self):
+  """ Return currently selected language """
+  def get_language(self):
+    if self.session.get('user_language'):
+      language = self.session['user_language']
+    else:
+      language = 'en'
+      self.set_language(language)
 
-  #     if self.session.get('user_language'):
-  #       language = self.session['user_language']
-  #     else:
-  #       language = 'en'
-  #       self.set_language(language)
-  #     return language
+    return language

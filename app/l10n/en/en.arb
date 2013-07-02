@@ -1,0 +1,265 @@
+{
+  "@@author": "EPT",
+  "@@x-ept-variant-id": "1731",
+  "@@x-ept-export-version": "1.5.0",
+  "preheader": "Take advantage of your free strategy session.",
+  "@preheader": {
+    "source_text": "Take advantage of your free strategy session.",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6037"
+  },
+  "preheader_link_text": "Email {BodyName} today",
+  "@preheader_link_text": {
+    "source_text": "Email ${BodyName} today",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6038"
+  },
+  "masthead_id_text": "Customer ID:",
+  "@masthead_id_text": {
+    "source_text": "Customer ID:",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6039"
+  },
+  "masthead_cta_text": "Call {bold}{BodyName}{end_bold} today:",
+  "@masthead_cta_text": {
+    "source_text": "Call <strong>${BodyName}</strong> today:",
+    "placeholders": {
+      "bold": {
+        "example": "<strong>"
+      },
+      "end_bold": {
+        "example": "</strong>"
+      },
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6040"
+  },
+  "headline": "A smarter, more flexible AdWords.",
+  "@headline": {
+    "source_text": "A smarter, more flexible AdWords.",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6041"
+  },
+  "paragraph_1a": "We've upgraded AdWords since your last call with {CSRLastQuarterName}. Your new AdWords Performance Specialist {bold}{BodyName}{end_bold} is available to discuss these upgrades and help you get the most out of new AdWords enhanced campaigns.",
+  "@paragraph_1a": {
+    "source_text": "We've upgraded AdWords since your last call with ${CSRLastQuarterName}. Your new AdWords Performance Specialist <strong>${BodyName}</strong> is available to discuss these upgrades and help you get the most out of new AdWords enhanced campaigns.",
+    "placeholders": {
+      "CSRLastQuarterName": {
+        "example": "${CSRLastQuarterName}"
+      },
+      "bold": {
+        "example": "<strong>"
+      },
+      "end_bold": {
+        "example": "</strong>"
+      },
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6042"
+  },
+  "paragraph_1b": "We recently upgraded AdWords, so we'd like to introduce you to {bold}{BodyName}{end_bold}, your AdWords Performance Specialist. Set up a call for tips on how to get the most out of these new AdWords enhanced campaign upgrades.",
+  "@paragraph_1b": {
+    "source_text": "We recently upgraded AdWords, so we'd like to introduce you to <strong>${BodyName}</strong>, your AdWords Performance Specialist. Set up a call for tips on how to get the most out of these new AdWords enhanced campaign upgrades.",
+    "placeholders": {
+      "bold": {
+        "example": "<strong>"
+      },
+      "end_bold": {
+        "example": "</strong>"
+      },
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6047"
+  },
+  "list_title": "During your call, {BodyName} can help you:",
+  "@list_title": {
+    "source_text": "During your call, ${BodyName} can help you:",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6048"
+  },
+  "bullet_1": "Manage your ads more efficiently with fewer campaigns",
+  "@bullet_1": {
+    "source_text": "Manage your ads more efficiently with fewer campaigns",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6049"
+  },
+  "bullet_2": "Create smarter, flexible bidding strategies that can save you time",
+  "@bullet_2": {
+    "source_text": "Create smarter, flexible bidding strategies that can save you time",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6050"
+  },
+  "bullet_3": "Take strategic actions to help target customers by device, time and location",
+  "@bullet_3": {
+    "source_text": "Take strategic actions to help target customers by device, time and location",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6051"
+  },
+  "bullet_4": "Create custom reports to make more informed targeting decisions",
+  "@bullet_4": {
+    "source_text": "Create custom reports to make more informed targeting decisions",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6052"
+  },
+  "paragraph_3a": "To set up your session, email {BodyName} and include your Customer ID {bold}{formatted_external_cid}{end_bold} and a phone number where we can reach you. Or, you can call {link}{CSRNumber}{end_link} to get started right away.",
+  "@paragraph_3a": {
+    "source_text": "To set up your session, email ${BodyName} and include your Customer ID <strong>${formatted_external_cid}</strong> and a phone number where we can reach you. Or, you can call <a href=\"tel:${CSRNumber}\" class=\"phone-link\">${CSRNumber}</a> to get started right away.",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      },
+      "bold": {
+        "example": "<strong>"
+      },
+      "end_bold": {
+        "example": "</strong>"
+      },
+      "formatted_external_cid": {
+        "example": "${formatted_external_cid}"
+      },
+      "link": {
+        "example": "<a href=\"tel:${CSRNumber}\" class=\"phone-link\">"
+      },
+      "end_link": {
+        "example": "</a>"
+      },
+      "CSRNumber": {
+        "example": "${CSRNumber}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6053"
+  },
+  "paragraph_3b": "To set up your session, email {BodyName} and include your Customer ID {bold}{formatted_external_cid}{end_bold} and a phone number where we can reach you.",
+  "@paragraph_3b": {
+    "source_text": "To set up your session, email ${BodyName} and include your Customer ID <strong>${formatted_external_cid}</strong> and a phone number where we can reach you.",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      },
+      "bold": {
+        "example": "<strong>"
+      },
+      "end_bold": {
+        "example": "</strong>"
+      },
+      "formatted_external_cid": {
+        "example": "${formatted_external_cid}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6054"
+  },
+  "button_text": "Email {BodyName} today",
+  "@button_text": {
+    "source_text": "Email ${BodyName} today",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6055"
+  },
+  "callout_a": "Meet your{line_break}AdWords Team",
+  "@callout_a": {
+    "source_text": "Meet your<br>AdWords Team",
+    "placeholders": {
+      "line_break": {
+        "example": "<br>"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6056"
+  },
+  "callout_b": "If you have any questions about AdWords, {BodyName} will be happy to help.",
+  "@callout_b": {
+    "source_text": "If you have any questions about AdWords, ${BodyName} will be happy to help.",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6061"
+  },
+  "subject": "Talk with {BodyName} about new AdWords enhanced campaigns",
+  "@subject": {
+    "source_text": "Talk with ${BodyName} about new AdWords enhanced campaigns",
+    "placeholders": {
+      "BodyName": {
+        "example": "${BodyName}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "6070"
+  },
+  "paragraph_3a_s1": "",
+  "@paragraph_3a_s1": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8210"
+  },
+  "paragraph_3a_s2": "",
+  "@paragraph_3a_s2": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8211"
+  },
+  "paragraph_3a_s3": "",
+  "@paragraph_3a_s3": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8212"
+  },
+  "paragraph_3b_s1": "",
+  "@paragraph_3b_s1": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8213"
+  },
+  "paragraph_3b_s2": "",
+  "@paragraph_3b_s2": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8214"
+  },
+  "mywidth": "",
+  "@mywidth": {
+    "source_text": "",
+    "placeholders": {},
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "8316"
+  }
+}

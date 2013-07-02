@@ -1,0 +1,139 @@
+{
+  "@@author": "EPT",
+  "@@x-ept-variant-id": "12889",
+  "@@x-ept-export-version": "1.5.0",
+  "closing": "Saludos Cordiales,",
+  "@closing": {
+    "source_text": "Saludos Cordiales,",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "51510"
+  },
+  "subject": "Importante: Aumente sus Ventas con su cuenta {formatted_external_cid} de AdWords",
+  "@subject": {
+    "source_text": "Importante: Aumente sus Ventas con su cuenta ${formatted_external_cid} de AdWords",
+    "placeholders": {
+      "formatted_external_cid": {
+        "example": "${formatted_external_cid}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43974"
+  },
+  "greeting": "Estimado Anunciante: ",
+  "@greeting": {
+    "source_text": "Estimado Anunciante: ",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43975"
+  },
+  "paragraph_1a": "Mi nombre es {bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las {lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
+  "@paragraph_1a": {
+    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las ${lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
+    "placeholders": {
+      "bodyname": {
+        "example": "${bodyname}"
+      },
+      "lastmonthconversions": {
+        "example": "${lastmonthconversions}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43976"
+  },
+  "paragraph_1b": "Mi nombre es {bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las {lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
+  "@paragraph_1b": {
+    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las ${lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
+    "placeholders": {
+      "bodyname": {
+        "example": "${bodyname}"
+      },
+      "lastmonthconversions": {
+        "example": "${lastmonthconversions}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43977"
+  },
+  "paragraph_1c": "Mi nombre es {bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las {lastmonthconversions} conversiones del último mes. Como está usando el seguimiento de conversiones para medir el impacto de sus anuncios, programemos una llamada para asegurarnos de que lo esté usando de manera eficaz. También puedo aconsejarle sobre:",
+  "@paragraph_1c": {
+    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las ${lastmonthconversions} conversiones del último mes. Como está usando el seguimiento de conversiones para medir el impacto de sus anuncios, programemos una llamada para asegurarnos de que lo esté usando de manera eficaz. También puedo aconsejarle sobre:",
+    "placeholders": {
+      "bodyname": {
+        "example": "${bodyname}"
+      },
+      "lastmonthconversions": {
+        "example": "${lastmonthconversions}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43978"
+  },
+  "paragraph_1d": "Mi nombre es {bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las {lastmonthconversions} conversiones del último mes. Como está usando el seguimiento de conversiones para medir el impacto de sus anuncios, programemos una llamada para asegurarnos de que lo esté usando de manera eficaz. También puedo aconsejarle sobre:",
+  "@paragraph_1d": {
+    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las ${lastmonthconversions} conversiones del último mes. Como está usando el seguimiento de conversiones para medir el impacto de sus anuncios, programemos una llamada para asegurarnos de que lo esté usando de manera eficaz. También puedo aconsejarle sobre:",
+    "placeholders": {
+      "bodyname": {
+        "example": "${bodyname}"
+      },
+      "lastmonthconversions": {
+        "example": "${lastmonthconversions}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43979"
+  },
+  "bullet_1": "qué anuncios, palabras clave y campañas son más eficaces,",
+  "@bullet_1": {
+    "source_text": "qué anuncios, palabras clave y campañas son más eficaces,",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43998"
+  },
+  "bullet_2": "estrategias para llegar al público correcto por dispositivo, horario y ubicación,",
+  "@bullet_2": {
+    "source_text": "estrategias para llegar al público correcto por dispositivo, horario y ubicación,",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "43999"
+  },
+  "bullet_3": "cómo usar el Optimizador de Conversiones para obtener más conversiones y ahorrar tiempo.",
+  "@bullet_3": {
+    "source_text": "cómo usar el Optimizador de Conversiones para obtener más conversiones y ahorrar tiempo.",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "44000"
+  },
+  "paragraph_2a": "Para programar la sesión de consultoría gratuita, responda a este correo electrónico e indique en qué día y horario y a qué número puedo comunicarme con usted. O llámeme al número {csrnumber}. Espero podamos aprovechar esta oportunidad para aumentar sus ventas.",
+  "@paragraph_2a": {
+    "source_text": "Para programar la sesión de consultoría gratuita, responda a este correo electrónico e indique en qué día y horario y a qué número puedo comunicarme con usted. O llámeme al número ${csrnumber}. Espero podamos aprovechar esta oportunidad para aumentar sus ventas.",
+    "placeholders": {
+      "csrnumber": {
+        "example": "${csrnumber}"
+      }
+    },
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "44001"
+  },
+  "paragraph_2b": "Para programar la sesión de consultoría gratuita, responda a este correo electrónico e indique en qué día y horario y a qué número puedo comunicarme con usted. Espero podamos aprovechar esta oportunidad para aumentar sus ventas.",
+  "@paragraph_2b": {
+    "source_text": "Para programar la sesión de consultoría gratuita, responda a este correo electrónico e indique en qué día y horario y a qué número puedo comunicarme con usted. Espero podamos aprovechar esta oportunidad para aumentar sus ventas.",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "44002"
+  },
+  "csr_title": "Gerente de Cuentas",
+  "@csr_title": {
+    "source_text": "Gerente de Cuentas",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "44003"
+  },
+  "team_name": "El Equipo de Google AdWords",
+  "@team_name": {
+    "source_text": "El Equipo de Google AdWords",
+    "placeholders": [],
+    "x-gtt-message-splitable": "true",
+    "x-ept-variable-id": "44004"
+  }
+}

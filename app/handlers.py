@@ -6,13 +6,15 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('app/templates'))
 # load custom libraries
 from lib.basehandler import BaseHandler
 
+
 class LanguageEntryHandler(BaseHandler):
   def get(self, language):
-  
+ 
   #"""Set language for the session based on language code appended to url"""
 
     BaseHandler.set_language(self, language)
     self.redirect_to('home')
+
 
 class HomeHandler(BaseHandler):
   def get(self):
@@ -30,6 +32,7 @@ class HomeHandler(BaseHandler):
 
     # display page
     self.response.out.write(template.render(template_values))
+
 
 class ChangeLanguageHandler(BaseHandler):
   def get(self):

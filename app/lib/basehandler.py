@@ -3,10 +3,11 @@ import os
 import webapp2
 from webapp2_extras import sessions
 
+
 class BaseHandler(webapp2.RequestHandler):
   """
     BaseHandler for all requests
-    
+
     Holds the session properties so they
     are reachable for all requests
   """
@@ -44,7 +45,7 @@ class BaseHandler(webapp2.RequestHandler):
 
     arb = json.load(open('app/l10n/en/en.arb'))
     return arb
-    
+
   def get_content(self):
     copydeck = {}
     data = self.get_arb()
@@ -72,7 +73,7 @@ class BaseHandler(webapp2.RequestHandler):
       array = self.get_languages()
       return '|'.join(str(language) for language in array)
 
-  def set_language(self):
+  def set_language(self, selected_language):
     valid_languages = self.get_languages()
     new_language = ''
 

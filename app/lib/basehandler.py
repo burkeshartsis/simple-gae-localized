@@ -5,95 +5,95 @@ from webapp2_extras import sessions
 
 
 class BaseHandler(webapp2.RequestHandler):
-  """
-    BaseHandler for all requests
-
-    Holds the session properties so they
-    are reachable for all requests
-  """
-  def dispatch(self):
     """
-      Get a session store for this request.
+        BaseHandler for all requests
+
+        Holds the session properties so they
+        are reachable for all requests
     """
-    self.session_store = sessions.get_store(request=self.request)
+    def dispatch(self):
+        """
+            Get a session store for this request.
+        """
+        self.session_store = sessions.get_store(request=self.request)
 
-    route_name = self.request.route.name
+        route_name = self.request.route.name
 
-    # if this is not the home page or a translation
-    if route_name != 'home' and route_name != 'enter_with_language':
-      return self.redirect('/')
+        # if this is not the home page or a translation
+        if route_name != 'home' and route_name != 'enter_with_language':
+            return self.redirect('/')
 
-    try:
-      # Dispatch the request.
-      webapp2.RequestHandler.dispatch(self)
-    finally:
-      # Save all sessions.
-      self.session_store.save_sessions(self.response)
+        try:
+            # Dispatch the request.
+            webapp2.RequestHandler.dispatch(self)
+        finally:
+            # Save all sessions.
+            self.session_store.save_sessions(self.response)
 
-    @webapp2.cached_property
-    def session_store(self):
-      return sessions.get_store(request=self.request)
+        @webapp2.cached_property
+        def session_store(self):
+            return sessions.get_store(request=self.request)
 
-    @webapp2.cached_property
-    def session(self):
-      # Returns a session using the default cookie key.
-      return self.session_store.get_session()
+        @webapp2.cached_property
+        def session(self):
+            # Returns a session using the default cookie key.
+            return self.session_store.get_session()
 
-  def get_arb(self):
-    #language = self.get_language()
-    #arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
+    def get_arb(self):
+        #language = self.get_language()
+        #arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
 
-    arb = json.load(open('app/l10n/en/en.arb'))
-    return arb
+        arb = json.load(open('app/l10n/en/en.arb'))
+        return arb
 
-  def get_content(self):
-    copydeck = {}
-    data = self.get_arb()
-    for key, value in data.iteritems():
-      if '@' in key:
-        continue
+    def get_content(self):
+        copydeck = {}
+        data = self.get_arb()
+        for key, value in data.iteritems():
+            if '@' in key:
+                continue
 
-      placeholders = data['@' + key]['placeholders']
+            placeholders = data['@' + key]['placeholders']
 
-      replacements = {}
-      for placeholder in placeholders:
-        replacement = data['@' + key]['placeholders'][placeholder]['example']
-        replacements[placeholder] = replacement
+            replacements = {}
+            for placeholder in placeholders:
+                replacement = data['@' + key]['placeholders'][placeholder]['example']
+                replacements[placeholder] = replacement
 
-      value = value.format(**replacements)
-      copydeck[key] = value
+            value = value.format(**replacements)
+            copydeck[key] = value
 
-    return copydeck
+        return copydeck
 
-  def get_languages(self):
-    languages = os.listdir('app/l10n')
-    return languages
+    def get_languages(self):
+        languages = os.listdir('app/l10n')
+        return languages
 
-  def get_language_regex(self):
-      array = self.get_languages()
-      return '|'.join(str(language) for language in array)
+    def get_language_regex(self):
+        array = self.get_languages()
+        return '|'.join(str(language) for language in array)
 
-  def set_language(self, selected_language):
-    valid_languages = self.get_languages()
-    new_language = ''
+    def set_language(self, selected_language):
+        valid_languages = self.get_languages()
+        new_language = ''
 
-    # Make sure language is valid, otherwise set to English US
-    for language in valid_languages:
-      if selected_language == language:
-        new_language = language
-        break
+        # Make sure language is valid, otherwise set to English US
+        for language in valid_languages:
+            if selected_language == language:
+                new_language = language
+                break
 
-    if new_language is None:
-      new_language = 'en'
+        if new_language is None:
+            new_language = 'en'
 
-    self.session['user_language'] = new_language
+        self.session['user_language'] = new_language
 
-  """ Return currently selected language """
-  def get_language(self):
-    if self.session.get('user_language'):
-      language = self.session['user_language']
-    else:
-      language = 'en'
-      self.set_language(language)
+    """ Return currently selected language """
+    def get_language(self):
+        if self.session.get('user_language'):
+            language = self.session['user_language']
+        else:
+            language = 'en'
+            self.set_language(language)
 
-    return language
+        return language

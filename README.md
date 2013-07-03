@@ -1,4 +1,4 @@
-simple-gae-boilerplate
+simple-gae-localized
 ======================
 
 A more robust Google App Engine boilerplate with localization support based on the simplified, frontend focused, [Simple-GAE-Boilerplate](https://github.com/burkeshartsis/simple-gae-boilerplate)

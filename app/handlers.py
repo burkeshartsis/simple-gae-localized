@@ -10,11 +10,10 @@ from lib.basehandler import BaseHandler
 class LanguageEntryHandler(BaseHandler):
     def get(self, language):
         """Set language for the session based on language code appended to url"""
-        lang = self.request.get('language')
         valid_languages = BaseHandler.get_languages(self)
 
-        if lang in valid_languages:
-            BaseHandler.set_language(self, lang)
+        if language in valid_languages:
+            BaseHandler.set_language(self, language)
 
         self.redirect_to('home')
 

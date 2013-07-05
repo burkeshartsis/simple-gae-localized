@@ -1,7 +1,7 @@
 simple-gae-localized
 ======================
 
-A more robust Google App Engine boilerplate with localization support based on the simplified, frontend focused, [Simple-GAE-Boilerplate](https://github.com/burkeshartsis/simple-gae-boilerplate)
+A more robust Google App Engine boilerplate with localization support based on the simplified, frontend focused, [Simple-GAE-Boilerplate](https://github.com/burkeshartsis/simple-gae-boilerplate).
 
 ======================
 
@@ -36,3 +36,7 @@ What it still doesn't have:
 
 - SASS/SCSS/LESS
 - Database setup
+
+Acknowledgements
+----------------
+Special thanks goes out to [Patrick Guiness](https://github.com/patrickguiness) for his help debugging. Not sure how many hours I would have waisted without him.

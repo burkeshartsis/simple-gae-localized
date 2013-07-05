@@ -42,8 +42,6 @@ class BaseHandler(webapp2.RequestHandler):
     def get_arb(self):
         language = self.get_language()
         arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
-
-        # arb = json.load(open('app/l10n/en/en.arb'))
         return arb
 
     def get_content(self):
@@ -69,21 +67,15 @@ class BaseHandler(webapp2.RequestHandler):
         languages = os.listdir('app/l10n')
         return languages
 
-    # def get_language_regex(self):
-    #     array = self.get_languages()
-    #     return '|'.join(str(language) for language in array)
-
     def set_language(self, selected_language):
         valid_languages = self.get_languages()
         new_language = ''
 
         # Make sure language is valid, otherwise set to English US
-        for language in valid_languages:
-            if selected_language == language:
-                new_language = language
-                break
+        if selected_language in valid_languages:
+            new_language = selected_language
 
-        if new_language is None:
+        else:
             new_language = 'en'
 
         self.session['user_language'] = new_language

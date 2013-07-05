@@ -9,9 +9,13 @@ from lib.basehandler import BaseHandler
 
 class LanguageEntryHandler(BaseHandler):
     def get(self, language):
-        #"""Set language for the session based on language code appended to url"""
+        """Set language for the session based on language code appended to url"""
+        lang = self.request.get('language')
+        valid_languages = BaseHandler.get_languages(self)
 
-        BaseHandler.set_language(self, language)
+        if lang in valid_languages:
+            BaseHandler.set_language(self, lang)
+
         self.redirect_to('home')
 
 
@@ -21,7 +25,8 @@ class HomeHandler(BaseHandler):
 
         template_values = {
             # declare template values here
-            'l10n': BaseHandler.get_content(self)
+            'l10n': BaseHandler.get_content(self),
+            'boom': BaseHandler.get_language(self)
         }
 
         # load the welcome page template
@@ -35,7 +40,7 @@ class ChangeLanguageHandler(BaseHandler):
     def get(self):
         """Change the site language"""
 
-        new_language = self.request.get('lang')
+        new_language = self.request.get('language')
 
         BaseHandler.set_language(self, new_language)
 

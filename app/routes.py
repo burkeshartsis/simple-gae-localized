@@ -7,7 +7,7 @@ import handlers
 _routes = [
     RedirectRoute('/', handlers.HomeHandler, name='home', strict_slash=True),
     RedirectRoute('/change-language', handlers.ChangeLanguageHandler, name='change_language', strict_slash=True),
-    RedirectRoute('/<language:(' + str(BaseHandler.get_language_regex) + ')>', handlers.LanguageEntryHandler, name='enter_with_language', strict_slash=True)
+    RedirectRoute('/<language>', handlers.LanguageEntryHandler, name='enter_with_language', strict_slash=True)
 ]
 
 

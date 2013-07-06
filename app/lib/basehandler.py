@@ -44,24 +44,46 @@ class BaseHandler(webapp2.RequestHandler):
         arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
         return arb
 
+    def get_data_variables(self):
+        language = self.get_language()
+
+        try:
+            global_variables = json.load(open('app/l10n/data.json'))
+            localized_variables = json.load(open('app/l10n/' + language + '/data.json'))
+
+            data = dict(global_variables.items() + localized_variables.items())
+        except:
+            try:
+                data = json.load(open('app/l10n/' + language + '/data.json'))
+            except:
+                data = None
+
+        return data
+
     def get_content(self):
+        data_variables = self.get_data_variables()
         copydeck = {}
-        data = self.get_arb()
-        for key, value in data.iteritems():
+        arb = self.get_arb()
+
+        for key, value in arb.iteritems():
             if '@' in key:
                 continue
 
-            placeholders = data['@' + key]['placeholders']
+            placeholders = arb['@' + key]['placeholders']
 
             replacements = {}
             for placeholder in placeholders:
-                replacement = data['@' + key]['placeholders'][placeholder]['example']
+                replacement = arb['@' + key]['placeholders'][placeholder]['example']
                 replacements[placeholder] = replacement
 
             value = value.format(**replacements)
             copydeck[key] = value
 
-        return copydeck
+        if data_variables is not None:
+            content = dict(copydeck.items() + data_variables.items())
+            return content
+        else:
+            return copydeck
 
     def get_languages(self):
         languages = os.listdir('app/l10n')

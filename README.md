@@ -28,9 +28,9 @@ What's new!
 
 - Localization support for text strings via [ARB](https://code.google.com/p/arb/wiki/ApplicationResourceBundleSpecification)
 	- this json like format is robust and works great with [Google's Translator Toolkit](https://support.google.com/translate/toolkit/topic/22235?hl=en&ref_topic=22228)
-- Url Mapping for supported languages
-	- supported languages are detected automatically after added to the l10n folder
+- Automatic url Mapping for supported languages
 - Session saving for languague preference persistance
+- Global and localized data variables for clean and easy seperation of translated content
 
 What it still doesn't have:
 

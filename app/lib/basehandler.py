@@ -39,9 +39,15 @@ class BaseHandler(webapp2.RequestHandler):
         # Returns a session using the default cookie key.
         return self.session_store.get_session()
 
-    def get_arb(self):
+    def get_arb(self, page_name=''):
         language = self.get_language()
-        arb = json.load(open('app/l10n/' + language + '/' + language + '.arb'))
+
+        if page_name == '':
+            page = language
+        else:
+            page = page_name
+
+        arb = json.load(open('app/l10n/' + language + '/' + page + '.arb'))
         return arb
 
     def get_data_variables(self):
@@ -60,10 +66,17 @@ class BaseHandler(webapp2.RequestHandler):
 
         return data
 
-    def get_content(self):
-        data_variables = self.get_data_variables()
+    def get_content(self, page_name=''):
+        # data_variables = self.get_data_variables(page_name)
+        language = self.get_language()
+
+        if page_name == '':
+            page = language
+        else:
+            page = page_name
+
+        arb = self.get_arb(page)
         copydeck = {}
-        arb = self.get_arb()
 
         for key, value in arb.iteritems():
             if '@' in key:
@@ -79,11 +92,11 @@ class BaseHandler(webapp2.RequestHandler):
             value = value.format(**replacements)
             copydeck[key] = value
 
-        if data_variables is not None:
-            content = dict(copydeck.items() + data_variables.items())
-            return content
-        else:
-            return copydeck
+        # if data_variables is not None:
+        #     content = dict(copydeck.items() + data_variables.items())
+        #     return content
+        # else:
+        return copydeck
 
     def get_languages(self):
         languages = os.listdir('app/l10n')

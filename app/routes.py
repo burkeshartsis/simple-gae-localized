@@ -1,7 +1,6 @@
 from webapp2_extras.routes import RedirectRoute
 
 # load custom libraries
-from lib.basehandler import BaseHandler
 import handlers
 
 _routes = [

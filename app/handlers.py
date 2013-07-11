@@ -24,7 +24,8 @@ class HomeHandler(BaseHandler):
 
         template_values = {
             # declare template values here
-            'l10n': BaseHandler.get_content(self),
+            'l10n': BaseHandler.get_content(self, 'home'),
+            'data': BaseHandler.get_data_variables(self),
             'boom': BaseHandler.get_language(self)
         }
 

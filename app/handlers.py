@@ -29,7 +29,7 @@ class HomeHandler(BaseHandler):
             'boom': BaseHandler.get_language(self)
         }
 
-        # load the welcome page template
+        # load the home page template
         template = jinja_env.get_template('index.html')
 
         # display page

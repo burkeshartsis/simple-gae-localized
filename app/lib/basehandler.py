@@ -1,6 +1,8 @@
+import ast
 import json
 import os
 import webapp2
+from jinja2 import Template
 from webapp2_extras import sessions
 
 
@@ -39,7 +41,7 @@ class BaseHandler(webapp2.RequestHandler):
         # Returns a session using the default cookie key.
         return self.session_store.get_session()
 
-    def get_arb(self, page_name=''):
+    def set_page_name(self, page_name=''):
         language = self.get_language()
 
         if page_name == '':
@@ -47,10 +49,16 @@ class BaseHandler(webapp2.RequestHandler):
         else:
             page = page_name
 
+        return page
+
+    def get_arb(self, page_name=''):
+        language = self.get_language()
+        page = self.set_page_name(page_name)
+
         arb = json.load(open('app/l10n/' + language + '/' + page + '.arb'))
         return arb
 
-    def get_data_variables(self):
+    def get_data_variables(self, output='raw'):
         language = self.get_language()
 
         try:
@@ -64,16 +72,15 @@ class BaseHandler(webapp2.RequestHandler):
             except:
                 data = None
 
+        if output == 'nested' and data is not None:
+            data = {
+                'data': data
+            }
+
         return data
 
-    def get_content(self, page_name=''):
-        # data_variables = self.get_data_variables(page_name)
-        language = self.get_language()
-
-        if page_name == '':
-            page = language
-        else:
-            page = page_name
+    def get_copydeck(self, page_name=''):
+        page = self.set_page_name(page_name)
 
         arb = self.get_arb(page)
         copydeck = {}
@@ -92,11 +99,20 @@ class BaseHandler(webapp2.RequestHandler):
             value = value.format(**replacements)
             copydeck[key] = value
 
-        # if data_variables is not None:
-        #     content = dict(copydeck.items() + data_variables.items())
-        #     return content
-        # else:
         return copydeck
+
+    def get_content(self, page_name=''):
+        page = self.set_page_name(page_name)
+
+        copy = self.get_copydeck(page)
+        data = self.get_data_variables('nested')
+
+        if data is not None:
+            template = Template(str(copy)).render(data)
+            content = ast.literal_eval(template)
+            return content
+        else:
+            return copy
 
     def get_languages(self):
         languages = os.listdir('app/l10n')

@@ -29,13 +29,13 @@
   },
   "paragraph_1a": "Mi nombre es {bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las {lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
   "@paragraph_1a": {
-    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las ${lastmonthconversions} conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
+    "source_text": "Mi nombre es ${bodyname} y soy su Gerente de Cuentas de AdWords. Me gustaría hablar sobre algunas ideas que le permitirán aumentar las <small>{{ data.links.boom }}</small> conversiones del último mes. Veo que ha realizado algunos cambios en su cuenta en el pasado, como por ejemplo utilizar el seguimiento de conversiones para medir el impacto de sus anuncios. Me gustaría que programemos una llamada para asegurarnos de que lo esté utilizando de manera correcta para llegar a los clientes adecuados. También puedo aconsejarle sobre:",
     "placeholders": {
       "bodyname": {
         "example": "${bodyname}"
       },
       "lastmonthconversions": {
-        "example": "${lastmonthconversions}"
+        "example": "<small>{{ data.links.boom }}</small>"
       }
     },
     "x-gtt-message-splitable": "true",

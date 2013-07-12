@@ -53,10 +53,10 @@
   },
   "paragraph_1a": "We've upgraded AdWords since your last call with {CSRLastQuarterName}. Your new AdWords Performance Specialist {bold}{BodyName}{end_bold} is available to discuss these upgrades and help you get the most out of new AdWords enhanced campaigns.",
   "@paragraph_1a": {
-    "source_text": "We've upgraded AdWords since your last call with ${CSRLastQuarterName}. Your new AdWords Performance Specialist <strong>${BodyName}</strong> is available to discuss these upgrades and help you get the most out of new AdWords enhanced campaigns.",
+    "source_text": "We've upgraded AdWords since your last call with <small>{{ data.links.boom }}</small>. Your new AdWords Performance Specialist <strong>${BodyName}</strong> is available to discuss these upgrades and help you get the most out of new AdWords enhanced campaigns.",
     "placeholders": {
       "CSRLastQuarterName": {
-        "example": "${CSRLastQuarterName}"
+        "example": "<small>{{ data.links.boom }}</small>"
       },
       "bold": {
         "example": "<strong>"

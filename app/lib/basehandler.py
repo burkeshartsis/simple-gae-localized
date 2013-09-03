@@ -89,7 +89,10 @@ class BaseHandler(webapp2.RequestHandler):
             if '@' in key:
                 continue
 
-            placeholders = arb['@' + key]['placeholders']
+            try:
+                placeholders = arb['@' + key]['placeholders']
+            except:
+                placeholders = {}
 
             replacements = {}
             for placeholder in placeholders:
